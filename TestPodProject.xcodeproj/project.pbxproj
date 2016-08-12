@@ -13,6 +13,7 @@
 		D66CF7841D5D7DCC000B74CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66CF7821D5D7DCC000B74CD /* Main.storyboard */; };
 		D66CF7861D5D7DCC000B74CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66CF7851D5D7DCC000B74CD /* Assets.xcassets */; };
 		D66CF7891D5D7DCC000B74CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66CF7871D5D7DCC000B74CD /* LaunchScreen.storyboard */; };
+		D6D4CA9C1D5DA40C00B1AE51 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D4CA9B1D5DA40C00B1AE51 /* HockeySDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D66CF7851D5D7DCC000B74CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66CF7881D5D7DCC000B74CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D66CF78A1D5D7DCC000B74CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D4CA9B1D5DA40C00B1AE51 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "Vendor/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D4CA9C1D5DA40C00B1AE51 /* HockeySDK.framework in Frameworks */,
 				BE45FBCC5F52BA99D2212C4E /* Pods_TestPodProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +63,7 @@
 		D66CF7721D5D7DCC000B74CD = {
 			isa = PBXGroup;
 			children = (
+				D6D4CA9A1D5DA3FE00B1AE51 /* Vendor */,
 				D66CF77D1D5D7DCC000B74CD /* TestPodProject */,
 				D66CF77C1D5D7DCC000B74CD /* Products */,
 				C6D6F26959C30E6294459C5B /* Pods */,
@@ -86,6 +90,14 @@
 				D66CF78A1D5D7DCC000B74CD /* Info.plist */,
 			);
 			path = TestPodProject;
+			sourceTree = "<group>";
+		};
+		D6D4CA9A1D5DA3FE00B1AE51 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D6D4CA9B1D5DA40C00B1AE51 /* HockeySDK.framework */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +339,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = TestPodProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MyApps.DemoApp;
@@ -340,6 +356,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = TestPodProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MyApps.DemoApp;
